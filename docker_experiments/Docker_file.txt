@@ -10,5 +10,7 @@ WORKDIR my_super_dir
 # эта команда похожа на инструкцию RUN ["cd", "./my_super_dir"]
 # в документации Docker рекомендуется использовать именно WORKDIR
 
-CMD ["python3", "./main.py"]
+run pip install cowsay
+
+CMD ["python3", "main.py"]
 # эта инструкция указывает ту команду, которая должна выполниться при старте контейнера
