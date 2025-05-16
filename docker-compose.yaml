@@ -1,8 +1,12 @@
 services:
-  churn-app:
+  main-app:
     env_file:
       - ./.env
     build:
       dockerfile: Dockerfile
     ports:
-      - "4601:8081"
+      - "${APP_VM_PORT}:${APP_DOCKER_PORT}"
+    volumes:
+      - type: bind
+        source: ./models
+        target: /churn_app/models
