@@ -4,3 +4,8 @@ docker container ps --посмотреть какие контейнеры за�
 docker container ps -a --все контейнеры, которые когда-либо запускались
 docker container start -i epic_nightingale --запуск по имени
 
+
+PROM QL
+histogram_quantile(0.5, main_app_predictions_bucket) --медианное значение предсказаний
+
+
